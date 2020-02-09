@@ -56,7 +56,6 @@ class HomeViewController: UIViewController {
         OptionsView.isHidden = true
         ImageView.isHidden = true
         DialogueLabelView.isHidden = true
-        level -= 1
         
         // DialougeView
         DialogueLabelView.textColor = UIColor.white
@@ -70,7 +69,7 @@ class HomeViewController: UIViewController {
         
         switch level {
             
-        case 0:
+        case 1:
             switch num {
             // Level #1
             case 0: return "Person X wants to set up their business of producing and selling furniture"
@@ -79,14 +78,14 @@ class HomeViewController: UIViewController {
             case 3: return "Tertiary sector: this is the retail sector, responsible for selling the good or service."
                 
             case 4:
-                DialogueLabelView.text = content(num: 3, level: level)
                 OptionsView.isHidden = false
+                return "Tertiary sector: this is the retail sector, responsible for selling the good or service."
                 
             // Multiple Choice #1
             default: return "Error Loading Content"
             }
         
-        case 1:
+        case 2:
             switch num {
             // Level #2
             case 0: return "In order to begin trading, person X needs to begin production. What factors of production will they use?"
@@ -97,16 +96,15 @@ class HomeViewController: UIViewController {
             case 5: return "Enterprise is the risk-taking ability and the ability to combine the other three factors of production to produce goods or services"
                 
             case 6:
-                print("Lol: \(content(num: 5, level: level))")
-                DialogueLabelView.text = content(num: 5, level: level)
                 OptionsView.isHidden = false
+                return "Enterprise is the risk-taking ability and the ability to combine the other three factors of production to produce goods or services"
                 
             // Multiple Choice #2
                 
             default: return "Error Loading Content"
             }
         
-        case 2:
+        case 3:
             switch num {
             // Level #3
             case 0: return "Profit = selling price - cost price"
@@ -121,7 +119,7 @@ class HomeViewController: UIViewController {
             default: return "Error Loading Content"
             }
             
-        case 3:
+        case 4:
             switch num {
             // Level #4
             case 0: return "In order to be environmentally friendly/sustainable, you decide to install solar panels to power your furniture factories/production facilities."
@@ -134,7 +132,7 @@ class HomeViewController: UIViewController {
             default: return "Error Loading Content"
             }
             
-        case 4:
+        case 5:
             switch num {
             // Level #5
             case 0: return "Demand- the willingness and ability to buy a given good or service."
@@ -149,7 +147,7 @@ class HomeViewController: UIViewController {
             default: return "Error Loading Content"
             }
             
-        case 5:
+        case 6:
             switch num {
             // Level #6
             case 0: return "Supply is the willingness and ability to sell a good or service."
@@ -167,7 +165,7 @@ class HomeViewController: UIViewController {
             default: return "Error Loading Content"
             }
             
-            case 6:
+            case 7:
             switch num {
             // Level #7
             case 0: return "Demand curve and functions- The concept of demand as we previously learnt follows a trend for most goods (normal goods). This can better be understood by representing the trend using a demand function."
@@ -188,7 +186,7 @@ class HomeViewController: UIViewController {
             default: return "Error Loading Content"
             }
             
-        case 7:
+        case 8:
         switch num {
         // Level #8
         case 0: return "Equilibrium- equilibrium is the level where the quantity demanded equals quantity supplied."
@@ -207,7 +205,7 @@ class HomeViewController: UIViewController {
         default: return "Error Loading Content"
         }
             
-        case 8:
+        case 9:
         switch num {
         // Level #9
         case 0: return "Price Elasticity of demand- PED is the  degree by which demand changes. It is the responsiveness of demand to a change in price. There are four kinds of elasticities."
